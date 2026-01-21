@@ -6,3 +6,7 @@
 
 # Learner-specific files (created during training)
 lessons/progress.md
+
+# Instructor/internal docs (not for learners)
+CLAUDE.md
+Course Curriculum.md

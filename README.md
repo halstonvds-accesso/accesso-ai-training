@@ -25,7 +25,7 @@ Claude Code training course for accesso Product Managers.
    /lesson0
    ```
 
-4. Follow the interactive lessons in order, or check `Quick Start Guide.md` for the fast-track path.
+4. Follow the interactive lessons in order, or check `reference/Quick Start Guide.md` for the fast-track path.
 
 ## Course Structure
 
