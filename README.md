@@ -11,7 +11,7 @@ Claude Code training course for accesso Product Managers.
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/halstonvds-accesso/accesso-ai-training.git
    cd accesso-ai-training
    ```
 
