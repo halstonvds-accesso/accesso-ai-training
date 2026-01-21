@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Obsidian (editor-specific config)
+.obsidian/
+
+# Learner-specific files (created during training)
+lessons/progress.md
