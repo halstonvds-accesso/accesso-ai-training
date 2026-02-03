@@ -59,7 +59,8 @@ After setup, your vault will look like this:
 my-pm-vault/                   ← You run Claude here
 ├── .claude/commands/          ← Lesson commands (from this repo)
 ├── CLAUDE.md                  ← Your profile (created in Lesson 1)
-├── passport/                  ← Your work folders (created in Lesson 2)
+├── [work folders]/                  ← Your work folders (created in Lesson 2)
+├── [work folders]/                  ← Your work folders (created in Lesson 2)
 ├── interviews/
 ├── research/
 └── training/                  ← Training materials & progress
