@@ -9,25 +9,30 @@ Claude Code training course for accesso Product Managers.
 
 ## Getting Started
 
-1. Clone this repository to wherever you want your PM vault to live:
+1. Create your vault folder in Obsidian (if you haven't already), then open terminal and navigate into it:
    ```bash
-   git clone https://github.com/halstonvds-accesso/accesso-ai-training.git my-pm-vault
    cd my-pm-vault
    ```
 
-2. Start Claude Code:
+2. Clone the training into your vault:
+   ```bash
+   git clone https://github.com/halstonvds-accesso/accesso-ai-training.git .
+   ```
+
+
+3. Start Claude Code:
    ```bash
    claude
    ```
 
-3. Start with Lesson 0:
+4. Start with Lesson 0:
    ```
    /lesson0
    ```
 
-4. Follow the interactive lessons in order.
+5. Follow the interactive lessons in order.
 
-That's it! The folder you cloned becomes your workspace. Your CLAUDE.md, work folders, and everything else will be created here as you go through the lessons.
+That's it! Your vault folder becomes your workspace. Your CLAUDE.md, work folders, and everything else will be created here as you go through the lessons.
 
 ## Course Structure
 
