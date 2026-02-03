@@ -70,4 +70,4 @@ my-pm-vault/                   ← You run Claude here
 
 ## Questions?
 
-Reach out to the AI Training team if you get stuck.
+Reach out to Halston van der Sluys if you get stuck.
