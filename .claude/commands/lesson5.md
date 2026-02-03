@@ -18,11 +18,11 @@ This lesson walks PMs through understanding MCPs, installing the Atlassian MCP, 
 ## BEFORE YOU START: Read Their Context
 
 Read these files to personalize this lesson:
-- `lessons/progress.md` - Their name, previous lesson context
+- `training/lessons/progress.md` - Their name, previous lesson context
 - `CLAUDE.md` - Their role, products, preferences
 
 **Check for interrupted progress:**
-If `lessons/progress.md` contains "## Lesson 5: Atlassian MCP (In Progress)", the user was interrupted mid-lesson.
+If `training/lessons/progress.md` contains "## Lesson 5: Atlassian MCP (In Progress)", the user was interrupted mid-lesson.
 
 Use AskUserQuestion:
 
@@ -41,7 +41,7 @@ If starting fresh: Remove the "(In Progress)" entry and start from Section 1.
 
 **Create or update progress entry (In Progress):**
 
-If this is a fresh start, add to `lessons/progress.md`:
+If this is a fresh start, add to `training/lessons/progress.md`:
 ```markdown
 ## Lesson 5: Atlassian MCP (In Progress)
 **Started:** [Today's date]
@@ -365,7 +365,7 @@ Wait for them to try.
 
 **Finalize progress:** Remove the "(In Progress)" entry and replace with the completed entry:
 
-**Update lessons/progress.md** by replacing the "(In Progress)" entry with:
+**Update training/lessons/progress.md** by replacing the "(In Progress)" entry with:
 
 ```markdown
 ## Lesson 5: Atlassian MCP Setup & Usage ✓

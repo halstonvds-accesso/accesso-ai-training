@@ -18,7 +18,7 @@ This lesson is **dynamic** - it reads the learner's context from previous lesson
 ## BEFORE YOU START: Read Their Context Thoroughly
 
 Read these files to personalize this lesson:
-- `lessons/progress.md` - Their name, role, products, responsibilities, what they want to speed up, all previous lesson decisions
+- `training/lessons/progress.md` - Their name, role, products, responsibilities, what they want to speed up, all previous lesson decisions
 - `CLAUDE.md` - Their full profile, preferences, Atlassian config
 
 **Use this context to:**
@@ -28,7 +28,7 @@ Read these files to personalize this lesson:
 4. Give examples using their real context
 
 **Check for interrupted progress:**
-If `lessons/progress.md` contains "## Lesson 6: Practical Workflows (In Progress)", the user was interrupted mid-lesson.
+If `training/lessons/progress.md` contains "## Lesson 6: Practical Workflows (In Progress)", the user was interrupted mid-lesson.
 
 Use AskUserQuestion:
 
@@ -47,7 +47,7 @@ If starting fresh: Remove the "(In Progress)" entry and start from Section 1.
 
 **Create or update progress entry (In Progress):**
 
-If this is a fresh start, add to `lessons/progress.md`:
+If this is a fresh start, add to `training/lessons/progress.md`:
 ```markdown
 ## Lesson 6: Practical Workflows (In Progress)
 **Started:** [Today's date]
@@ -633,7 +633,7 @@ Answer any questions.
 
 **Finalize progress:** Remove the "(In Progress)" entry and replace with the completed entry:
 
-**Update lessons/progress.md** by replacing the "(In Progress)" entry with:
+**Update training/lessons/progress.md** by replacing the "(In Progress)" entry with:
 
 ```markdown
 ## Lesson 6: Practical Workflows ✓

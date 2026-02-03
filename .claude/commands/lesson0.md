@@ -16,28 +16,26 @@ This is **Lesson 0: Course Introduction**. Your job is to welcome the learner, s
 
 ## IMPORTANT: Workspace Structure
 
-**This training folder lives INSIDE the user's main vault/workspace.**
+**The user runs Claude from their vault root.** Training files live in a `training/` subfolder.
 
 Expected structure:
 ```
-my-vault/                          ← User's main workspace (VAULT ROOT)
-├── CLAUDE.md                      ← Created in Lesson 1 (HERE, not in training folder)
-├── passport/                      ← User's folders (created in Lesson 2, HERE)
+my-vault/                          ← User runs Claude HERE (vault root)
+├── .claude/commands/              ← Lesson commands
+├── CLAUDE.md                      ← Created in Lesson 1
+├── passport/                      ← User's folders (created in Lesson 2)
 ├── interviews/
 ├── research/
-└── accesso-ai-training/           ← This training folder
-    ├── .claude/commands/          ← Lesson commands live here
-    ├── lessons/progress.md        ← Training progress (stays here)
-    └── reference/                 ← Training reference docs (stays here)
+└── training/                      ← Training materials
+    ├── lessons/progress.md        ← Training progress
+    └── reference/                 ← Training reference docs
 ```
 
 **Key rules for file creation:**
-- **CLAUDE.md** → Create at `../CLAUDE.md` (vault root, OUTSIDE training folder)
-- **User folders** → Create at `../` (vault root, OUTSIDE training folder)
-- **lessons/progress.md** → Create at `lessons/progress.md` (INSIDE training folder)
-- **Reference docs** → Stay in `reference/` (INSIDE training folder)
-
-**The user should run Claude from INSIDE this accesso-ai-training folder** for lessons to work. Their actual work files go in their vault root (parent folder).
+- **CLAUDE.md** → Create at `CLAUDE.md` (vault root)
+- **User folders** → Create at vault root (`passport/`, `interviews/`, etc.)
+- **Training progress** → Create at `training/lessons/progress.md`
+- **Reference docs** → Located in `training/reference/`
 
 ---
 
@@ -59,10 +57,10 @@ Then share these helpful references:
 > "Quick note before we dive in:
 >
 > **How this workspace is set up:**
-> - This training folder sits inside your main vault/workspace
-> - When we create your CLAUDE.md and work folders, they go in your **main vault** (one level up from here)
-> - Training files like your progress stay in this folder
-> - So your actual PM work lives at the vault level, and training materials stay organized here
+> - You're in your main vault - this is where your PM work will live
+> - Your CLAUDE.md and work folders get created right here
+> - Training materials (progress, reference docs) are in the `training/` folder
+> - Everything stays organized in one place
 >
 > **Helpful commands during this course:**
 > - **`/course-map`** - See all lessons and what each covers
@@ -220,7 +218,7 @@ Then wrap up:
 
 **Before they leave, save their progress:**
 
-Create a `lessons/` folder and `lessons/progress.md` file using the Write tool with their responses:
+Create `training/lessons/progress.md` file using the Write tool with their responses:
 
 ```markdown
 # Lesson Progress
@@ -243,7 +241,7 @@ This file tracks your journey through the Claude Code for PMs course.
 
 Then tell them:
 
-> "I've created a `lessons/` folder to track your progress. Each lesson will update this so you never have to repeat yourself - I'll remember everything."
+> "I've saved your progress in `training/lessons/progress.md`. Each lesson will update this so you never have to repeat yourself - I'll remember everything."
 
 Use AskUserQuestion:
 

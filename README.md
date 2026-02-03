@@ -4,35 +4,30 @@ Claude Code training course for accesso Product Managers.
 
 ## Prerequisites
 
-1. **Claude Code installed** - See `reference/Getting Started - Install Claude Code.md` for setup instructions
+1. **Claude Code installed** - See `training/reference/Getting Started - Install Claude Code.md` for setup instructions
 2. **Terminal access** - You'll run Claude Code from your terminal
 
 ## Getting Started
 
-1. Clone this repository to your local machine:
+1. Clone this repository to wherever you want your PM vault to live:
    ```bash
-   git clone https://github.com/halstonvds-accesso/accesso-ai-training.git
-   cd accesso-ai-training
+   git clone https://github.com/halstonvds-accesso/accesso-ai-training.git my-pm-vault
+   cd my-pm-vault
    ```
 
-
-2. You should now see a folder in your vault called accesso-ai-training. Change Directories (CD) into it:
-   ```bash
-   cd accesso-ai-training
-   ```
-
-
-3. Open the folder in Claude Code:
+2. Start Claude Code:
    ```bash
    claude
    ```
 
-4. Start with Lesson 0:
+3. Start with Lesson 0:
    ```
    /lesson0
    ```
 
-5. Follow the interactive lessons in order, or check `reference/Quick Start Guide.md` for the fast-track path.
+4. Follow the interactive lessons in order.
+
+That's it! The folder you cloned becomes your workspace. Your CLAUDE.md, work folders, and everything else will be created here as you go through the lessons.
 
 ## Course Structure
 
@@ -50,6 +45,22 @@ Claude Code training course for accesso Product Managers.
 
 - `/course-map` - See all available lessons
 - `/training-helpful-tips` - FAQ and troubleshooting
+
+## Folder Structure
+
+After setup, your vault will look like this:
+
+```
+my-pm-vault/                   ← You run Claude here
+├── .claude/commands/          ← Lesson commands (from this repo)
+├── CLAUDE.md                  ← Your profile (created in Lesson 1)
+├── passport/                  ← Your work folders (created in Lesson 2)
+├── interviews/
+├── research/
+└── training/                  ← Training materials & progress
+    ├── lessons/progress.md
+    └── reference/
+```
 
 ## Questions?
 

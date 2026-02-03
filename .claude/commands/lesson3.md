@@ -18,11 +18,11 @@ This lesson introduces PMs to built-in commands, keyboard shortcuts, and custom 
 ## BEFORE YOU START: Read Their Context
 
 Read these files to personalize this lesson:
-- `lessons/progress.md` - Their name, previous lesson context
+- `training/lessons/progress.md` - Their name, previous lesson context
 - `CLAUDE.md` (in parent directory) - Their role, products, preferences
 
 **Check for interrupted progress:**
-If `lessons/progress.md` contains "## Lesson 3: Commands & Shortcuts (In Progress)", the user was interrupted mid-lesson.
+If `training/lessons/progress.md` contains "## Lesson 3: Commands & Shortcuts (In Progress)", the user was interrupted mid-lesson.
 
 Use AskUserQuestion:
 
@@ -41,7 +41,7 @@ If starting fresh: Remove the "(In Progress)" entry and start from Section 1.
 
 **Create or update progress entry (In Progress):**
 
-If this is a fresh start, add to `lessons/progress.md`:
+If this is a fresh start, add to `training/lessons/progress.md`:
 ```markdown
 ## Lesson 3: Commands & Shortcuts (In Progress)
 **Started:** [Today's date]
@@ -369,7 +369,7 @@ Options:
 
 ## SECTION 9: Quick Reference Card
 
-> "Before we wrap up, here's your cheat sheet. This is also saved in `reference/useful-commands.md` for future reference:"
+> "Before we wrap up, here's your cheat sheet. This is also saved in `training/reference/useful-commands.md` for future reference:"
 
 **When to Use What:**
 
@@ -414,7 +414,7 @@ Answer any questions.
 
 **Finalize progress:** Remove the "(In Progress)" entry and replace with the completed entry:
 
-**Update lessons/progress.md** by replacing the "(In Progress)" entry with:
+**Update training/lessons/progress.md** by replacing the "(In Progress)" entry with:
 
 ```markdown
 ## Lesson 3: Commands & Power User Features ✓
@@ -438,7 +438,7 @@ Then tell them:
 > - Type `/help` anytime to see all available commands and skills
 > - You can ask me to build a custom command anytime - just describe what you want in plain English
 >
-> **Quick Reference:** Everything's saved in `reference/useful-commands.md`"
+> **Quick Reference:** Everything's saved in `training/reference/useful-commands.md`"
 
 Use AskUserQuestion:
 

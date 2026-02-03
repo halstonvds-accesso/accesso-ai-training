@@ -35,7 +35,7 @@ You are a helpful assistant guiding an accesso PM through common issues and tips
 
 > "Need to convert files between formats? We have Pandoc set up for this.
 >
-> See the reference doc: `reference/Optional Tools Setup.md`
+> See the reference doc: `training/reference/Optional Tools Setup.md`
 >
 > Quick examples:
 > - 'Convert my PRD to Word' → `pandoc file.md -o file.docx`

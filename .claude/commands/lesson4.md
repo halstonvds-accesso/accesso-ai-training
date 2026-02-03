@@ -20,11 +20,11 @@ This lesson teaches PMs how to use subagents - Claude's specialized assistants t
 ## BEFORE YOU START: Read Their Context
 
 Read these files to personalize this lesson:
-- `lessons/progress.md` - Their name, previous lesson context
+- `training/lessons/progress.md` - Their name, previous lesson context
 - `CLAUDE.md` (in parent directory) - Their role, products, stakeholders they work with
 
 **Check for interrupted progress:**
-If `lessons/progress.md` contains "## Lesson 4: Subagents (In Progress)", the user was interrupted mid-lesson.
+If `training/lessons/progress.md` contains "## Lesson 4: Subagents (In Progress)", the user was interrupted mid-lesson.
 
 Use AskUserQuestion:
 
@@ -43,7 +43,7 @@ If starting fresh: Remove the "(In Progress)" entry and start from Section 1.
 
 **Create or update progress entry (In Progress):**
 
-If this is a fresh start, add to `lessons/progress.md`:
+If this is a fresh start, add to `training/lessons/progress.md`:
 ```markdown
 ## Lesson 4: Subagents (In Progress)
 **Started:** [Today's date]
@@ -578,7 +578,7 @@ Options:
 
 **Personalized recommendations:**
 
-Based on their role and responsibilities from CLAUDE.md and lessons/progress.md, suggest 2-3 relevant subagents:
+Based on their role and responsibilities from CLAUDE.md and training/lessons/progress.md, suggest 2-3 relevant subagents:
 
 > "Based on what I know about your role as [their title] working on [their products], here are some subagents that might be useful for you:"
 
@@ -623,7 +623,7 @@ Ask what perspective or expertise they need, help them define it, and offer to c
 
 ## SECTION 15: Quick Reference Card
 
-> "Here's your cheat sheet for subagents. This is also in `reference/useful-commands.md`:"
+> "Here's your cheat sheet for subagents. This is also in `training/reference/useful-commands.md`:"
 
 **Parallel Research Prompts:**
 
@@ -675,7 +675,7 @@ Answer any questions.
 
 **Finalize progress:** Remove the "(In Progress)" entry and replace with the completed entry:
 
-**Update lessons/progress.md** by replacing the "(In Progress)" entry with:
+**Update training/lessons/progress.md** by replacing the "(In Progress)" entry with:
 
 ```markdown
 ## Lesson 4: Subagents for Parallel Research & Perspectives ✓

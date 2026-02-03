@@ -18,13 +18,13 @@ This lesson teaches PMs how to talk to Claude naturally, organize their workspac
 ## BEFORE YOU START: Read Their Context
 
 Read these files to personalize this lesson:
-- `lessons/progress.md` - Their name, what they're excited about, workflow to speed up
+- `training/lessons/progress.md` - Their name, what they're excited about, workflow to speed up
 - `CLAUDE.md` (in parent directory) - Their role, products, responsibilities, preferences
 
 Use this context throughout. Reference their specific products and responsibilities when giving examples.
 
 **Check for interrupted progress:**
-If `lessons/progress.md` contains "## Lesson 2: Workspace Setup (In Progress)", the user was interrupted mid-lesson.
+If `training/lessons/progress.md` contains "## Lesson 2: Workspace Setup (In Progress)", the user was interrupted mid-lesson.
 
 Use AskUserQuestion:
 
@@ -43,7 +43,7 @@ If starting fresh: Remove the "(In Progress)" entry and start from Section 1.
 
 **Create or update progress entry (In Progress):**
 
-If this is a fresh start, add to `lessons/progress.md`:
+If this is a fresh start, add to `training/lessons/progress.md`:
 ```markdown
 ## Lesson 2: Workspace Setup (In Progress)
 **Started:** [Today's date]
@@ -212,21 +212,17 @@ Options:
 If they want to adjust, make changes based on their input.
 
 **IMPORTANT - FILE LOCATION:**
-Create folders in the **PARENT directory** (the user's vault root), NOT inside this training folder.
-
-**Path:** Use `../` prefix for all folders (one level up from accesso-ai-training)
+Create folders at the **vault root** (where the user is running Claude), NOT inside the training folder.
 
 Example commands:
 ```bash
-mkdir -p ../passport/prds ../passport/stories
-mkdir -p ../interviews/notes ../interviews/synthesis
-mkdir -p ../research/competitive ../research/market
-mkdir -p ../meetings
+mkdir -p passport/prds passport/stories
+mkdir -p interviews/notes interviews/synthesis
+mkdir -p research/competitive research/market
+mkdir -p meetings
 ```
 
-Example: If user is in `/vault/accesso-ai-training/`, create at `/vault/passport/`, `/vault/interviews/`, etc.
-
-Tell the user: "I'm creating these folders in your main vault (one level up from the training folder) - that's where your actual work will live."
+Tell the user: "I'm creating these folders in your vault root - that's where your actual work will live."
 
 > "Done! I've created these folders in your main vault. Remember, this is just a starting point. As your workflow evolves, we can adjust the structure anytime - just ask me."
 
@@ -378,7 +374,7 @@ Answer any questions.
 
 ## SECTION 10: Wrap Up & Save Progress
 
-**Update their CLAUDE.md** (in parent directory) by adding a Workspace Structure section after "My Team & Stakeholders":
+**Update their CLAUDE.md** (at vault root) by adding a Workspace Structure section after "My Team & Stakeholders":
 
 ```markdown
 ## My Workspace Structure
@@ -396,7 +392,7 @@ Example:
 
 **Finalize progress:** Remove the "(In Progress)" entry and replace with the completed entry:
 
-**Update lessons/progress.md** by replacing the "(In Progress)" entry with:
+**Update training/lessons/progress.md** by replacing the "(In Progress)" entry with:
 
 ```markdown
 ## Lesson 2: Workspace Setup & Working with Files ✓
@@ -419,7 +415,7 @@ Then tell them:
 >
 > I've also updated your CLAUDE.md with your workspace structure so I'll always know where things are.
 >
-> **Quick Reference:** Check `reference/useful-commands.md` for a list of helpful commands and prompts.
+> **Quick Reference:** Check `training/reference/useful-commands.md` for a list of helpful commands and prompts.
 >
 > **Your homework:** Start dropping files into your new folders. Meeting notes, PRDs, research - get them in here so we can put these skills to use."
 

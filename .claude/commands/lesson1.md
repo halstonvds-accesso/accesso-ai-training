@@ -17,7 +17,7 @@ This lesson walks the PM through creating their personalized CLAUDE.md file AND 
 
 ## BEFORE YOU START: Read Their Progress
 
-First, read `lessons/progress.md` to get context from Lesson 0:
+First, read `training/lessons/progress.md` to get context from Lesson 0:
 - Their name
 - What they're most looking forward to
 - The workflow they want to speed up
@@ -25,7 +25,7 @@ First, read `lessons/progress.md` to get context from Lesson 0:
 Use this context to personalize this lesson. **Do not re-ask questions they already answered.**
 
 **Check for interrupted progress:**
-If `lessons/progress.md` contains "## Lesson 1: CLAUDE.md Setup (In Progress)", the user was interrupted mid-lesson.
+If `training/lessons/progress.md` contains "## Lesson 1: CLAUDE.md Setup (In Progress)", the user was interrupted mid-lesson.
 
 Use AskUserQuestion:
 
@@ -44,7 +44,7 @@ If starting fresh: Remove the "(In Progress)" entry and start from Section 1.
 
 **Create or update progress entry (In Progress):**
 
-If this is a fresh start, add to `lessons/progress.md`:
+If this is a fresh start, add to `training/lessons/progress.md`:
 ```markdown
 ## Lesson 1: CLAUDE.md Setup (In Progress)
 **Started:** [Today's date]
@@ -251,13 +251,11 @@ Options:
 If they want to change something, let them, then proceed.
 
 **IMPORTANT - FILE LOCATION:**
-Create the CLAUDE.md file in the **PARENT directory** (the user's vault root), NOT inside this training folder.
+Create the CLAUDE.md file at the **vault root** (where the user is running Claude).
 
-**Path:** Use `../CLAUDE.md` (one level up from accesso-ai-training)
+**Path:** `CLAUDE.md` (in the current directory - the vault root)
 
-Example: If user is in `/vault/accesso-ai-training/`, create at `/vault/CLAUDE.md`
-
-Tell the user: "I'm creating your CLAUDE.md in your main vault folder (one level up from the training folder) - that's where it needs to be so Claude reads it whenever you work in your vault."
+Tell the user: "I'm creating your CLAUDE.md in your vault root - that's where it needs to be so Claude reads it automatically."
 
 **Generate a CLAUDE.md that includes:**
 
@@ -306,7 +304,7 @@ Use this structure (fill in with their actual answers):
 These documents provide context about accesso. Claude can reference these when you need organizational or product information.
 
 ### Organization
-- [[reference/Accesso LLC Organization Chart]] - Who's who, reporting structure, team leads
+- [[training/reference/Accesso LLC Organization Chart]] - Who's who, reporting structure, team leads
   - Use when: Finding the right person to talk to, understanding team structure, identifying stakeholders
 
 ### Company Context (Coming Soon)
@@ -320,7 +318,7 @@ These documents provide context about accesso. Claude can reference these when y
 
 ## Lesson Progress
 
-My course progress and context is tracked in the `lessons/` folder. Reference `lessons/progress.md` for my learning journey and any context from previous lessons.
+My course progress and context is tracked in the `lessons/` folder. Reference `training/lessons/progress.md` for my learning journey and any context from previous lessons.
 
 ---
 
@@ -330,7 +328,7 @@ When working with me:
 - [Adapt based on their preferences - e.g., "Keep responses concise unless I ask for detail"]
 - [Add relevant notes based on their working style]
 - Reference the documents above when I ask about accesso org structure, products, or people
-- Reference lessons/progress.md for context from my training
+- Reference training/lessons/progress.md for context from my training
 - **Never assume.** If you don't have information or context for something, ask follow-up questions rather than guessing
 - Ask clarifying questions if my request is ambiguous
 ```
@@ -376,7 +374,7 @@ If they want to review, show them key parts or let them request changes.
 > "There are two files that keep Claude smart about you:
 >
 > 1. **CLAUDE.md** - Your profile, preferences, and reference docs (what we just created)
-> 2. **lessons/progress.md** - Your learning journey and decisions from each lesson
+> 2. **training/lessons/progress.md** - Your learning journey and decisions from each lesson
 >
 > Every time you use Claude in this workspace, it reads both of these. That's how it remembers who you are and what you've told it."
 
@@ -425,7 +423,7 @@ Answer any questions, then proceed.
 
 **Finalize progress:** Remove the "(In Progress)" entry and replace with the completed entry:
 
-**Update lessons/progress.md** by replacing the "(In Progress)" entry with:
+**Update training/lessons/progress.md** by replacing the "(In Progress)" entry with:
 
 ```markdown
 ## Lesson 1: Setting Up Your CLAUDE.md ✓
@@ -453,7 +451,7 @@ Then tell them:
 > - Keep it concise (~300 lines) - link out for detailed instructions
 > - Just ask me to update things - no manual editing needed
 >
-> **Quick Reference:** Check out `reference/quick-reference.md` for a summary of everything you'll learn in this course."
+> **Quick Reference:** Check out `training/reference/quick-reference.md` for a summary of everything you'll learn in this course."
 
 Use AskUserQuestion:
 
