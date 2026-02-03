@@ -4,8 +4,9 @@ Claude Code training course for accesso Product Managers.
 
 ## Prerequisites
 
-1. **Claude Code installed** - See `training/reference/Getting Started - Install Claude Code.md` for setup instructions
-2. **Terminal access** - You'll run Claude Code from your terminal
+1. **Obisidian Installed** - See `training/reference/Getting Started - Install Claude Code.md` for setup instructions
+2. **Claude Code installed** - See `training/reference/Getting Started - Install Claude Code.md` for setup instructions
+3. **Terminal access** - You'll run Claude Code from your terminal
 
 ## Getting Started
 

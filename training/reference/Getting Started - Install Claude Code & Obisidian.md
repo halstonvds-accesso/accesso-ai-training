@@ -65,7 +65,7 @@ High-quality local transcription using OpenAI's Whisper model. Runs entirely on 
 - **Best for:** Transcribing meeting recordings, audio files
 - **Note:** Free version available, paid version has more features
 
-### Whisper Flow (Paid, Mac Only)
+### Whisper Flow (Paid)
 
 Real-time transcription that works system-wide.
 
@@ -78,7 +78,7 @@ Real-time transcription that works system-wide.
 
 ## Step 3: Install Node.js
 
-Claude Code requires Node.js 18 or higher. Check if you already have it:
+Claude Code requires Node.js 18 or higher. Open your terminal. Check if you already have it:
 
 ```bash
 node --version
@@ -127,11 +127,7 @@ claude --version
 
 ## Step 5: Download the Course Files
 
-1. Download the course ZIP file from: **[COURSE DOWNLOAD LINK]**
-   *(Ask Halston or check #ai-enablement-product if you don't have the link)*
-2. Save it to your **Downloads** folder
-3. Don't unzip it - Claude will do that for you!
-
+1. Reference the instr
 ---
 
 ## Step 6: Install the Course with Claude
@@ -139,9 +135,9 @@ claude --version
 1. Open **Terminal**
 2. Navigate to your vault folder:
    ```bash
-   cd ~/Documents/accesso-handheld
+   cd path/to/vault
    ```
-   *(Replace `accesso-handheld` with your vault name)*
+   *(Replace `path to vault` with your vault name)*
 3. Start Claude Code:
    ```bash
    claude
