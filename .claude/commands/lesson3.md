@@ -8,7 +8,8 @@ This lesson introduces PMs to built-in commands, keyboard shortcuts, and custom 
 
 - Conversational and encouraging
 - Break into sections, require user input before proceeding
-- Use AskUserQuestion for structured choices, direct questions for open-ended
+- **CRITICAL:** Use AskUserQuestion with selectable options at every pause - never leave user at blank prompt
+- **CRITICAL:** Always make it clear how to continue the lesson
 - This should take ~20-25 minutes
 - **CRITICAL:** Use their context from previous lessons - reference their products and role
 
@@ -18,7 +19,34 @@ This lesson introduces PMs to built-in commands, keyboard shortcuts, and custom 
 
 Read these files to personalize this lesson:
 - `lessons/progress.md` - Their name, previous lesson context
-- `CLAUDE.md` - Their role, products, preferences
+- `CLAUDE.md` (in parent directory) - Their role, products, preferences
+
+**Check for interrupted progress:**
+If `lessons/progress.md` contains "## Lesson 3: Commands & Shortcuts (In Progress)", the user was interrupted mid-lesson.
+
+Use AskUserQuestion:
+
+**Ask:** "Looks like you started this lesson before. Want to pick up where you left off?"
+
+Options:
+- "Yes, continue from where I was"
+- "No, start fresh"
+
+If resuming: Read the "Last checkpoint" section and skip ahead to that point.
+If starting fresh: Remove the "(In Progress)" entry and start from Section 1.
+
+---
+
+## Starting/Resuming the Lesson
+
+**Create or update progress entry (In Progress):**
+
+If this is a fresh start, add to `lessons/progress.md`:
+```markdown
+## Lesson 3: Commands & Shortcuts (In Progress)
+**Started:** [Today's date]
+**Last checkpoint:** Section 1 - Welcome
+```
 
 ---
 
@@ -28,13 +56,14 @@ Greet them by name:
 
 > "Welcome back, [Name]! Today we're going to level up your Claude Code skills with commands and shortcuts. These are the little things that make you faster."
 
+Use AskUserQuestion:
+
 **Ask:** "Have you discovered any slash commands yet, or is this all new?"
 
-Use AskUserQuestion:
-- Options:
-  - "I've tried a few"
-  - "I know they exist but haven't used them"
-  - "What's a slash command?"
+Options:
+- "I've tried a few"
+- "I know they exist but haven't used them"
+- "What's a slash command?"
 
 Wait for response, tailor your pace accordingly.
 
@@ -60,17 +89,37 @@ Wait for response, tailor your pace accordingly.
 | `/memory` | Shows your CLAUDE.md and memory files | Checking what Claude remembers |
 | `/status` | Shows current session info | General health check |
 
-> "You don't need to memorize these. Just remember: **when in doubt, type `/` and browse.**"
+> "You don't need to memorize these. Just remember: **when in doubt, type `/` and browse**, or type `/help` to see everything available."
 
-**Ask:** "Want to try one? Type `/context` to see how much of your conversation budget you've used."
+Use AskUserQuestion:
 
-Wait for them to try it, then explain what the output means.
+**Ask:** "Ready to try one?"
+
+Options:
+- "Yes, let me try /context"
+- "Let me try a different one"
+- "Just show me what it does"
+
+**If they try /context or want to:**
+> "Go ahead and type `/context` to see how much of your conversation budget you've used."
+
+**IMPORTANT:** After they run the command, immediately follow up:
+
+> "You should see your context usage. This tells you how much of the conversation 'budget' you've used. When this gets high (70%+), you might want to `/compact` or `/clear`.
+
+Use AskUserQuestion:
+
+**Ask:** "Got it? Ready to learn when to use each command?"
+
+Options:
+- "Yes, continue"
+- "I have a question about this"
 
 ---
 
 ## SECTION 3: The Most Useful Commands (with Examples)
 
-> "Let me highlight the commands you'll use most often, with real examples of when to use them:"
+> "Let me walk you through the commands you'll use most often, with real examples of when to use them:"
 
 ---
 
@@ -107,22 +156,7 @@ Wait for them to try it, then explain what the output means.
 
 ---
 
-**3. `/context` - Check Your Budget**
-
-> "Shows how much of your conversation budget you've used."
-
-**When to use `/context`:**
-- You've been working for a while and things feel slow
-- Before starting a big task (do you have room?)
-- Curious how much space you have left
-- Deciding between `/compact` or `/clear`
-
-**Example:**
-> "You're about to ask Claude to analyze 5 documents. Run `/context` first - if you're already at 60%, you might want to `/compact` or `/clear` before that big task."
-
----
-
-**4. `/model` - Right Tool for the Job**
+**3. `/model` - Right Tool for the Job**
 
 > "Switch between Claude models based on what you need."
 
@@ -142,7 +176,7 @@ Wait for them to try it, then explain what the output means.
 
 ---
 
-**5. `/rewind` - Undo and Try Again**
+**4. `/rewind` - Undo and Try Again**
 
 > "Go back to a previous point in the conversation. Like an undo button for your chat."
 
@@ -155,23 +189,9 @@ Wait for them to try it, then explain what the output means.
 **Example:**
 > "You asked Claude to write a PRD and it came out way too technical. Instead of trying to fix it, `/rewind` back to before that response and rephrase: 'Write a PRD for a non-technical audience.' Fresh start from that point without losing everything before it."
 
-**Key difference from `/clear`:**
-> "**`/clear`** = Start completely over. **`/rewind`** = Go back to a specific point and try again."
-
 ---
 
-**6. `/cost` - Track Usage**
-
-> "Shows how much you've used in the current session."
-
-**When to use `/cost`:**
-- Curious about your usage
-- Want to understand which tasks use more tokens
-- Checking if a big task was worth it
-
----
-
-**7. Multiple Terminal Windows - Parallel Work**
+**5. Multiple Terminal Windows - Parallel Work**
 
 > "Here's a power user tip: you can open multiple terminal windows, each running Claude in the same vault."
 
@@ -189,22 +209,25 @@ Wait for them to try it, then explain what the output means.
 
 ---
 
-**Ask:** "Which of these do you think you'll use most?"
-
 Use AskUserQuestion:
-- Options:
-  - "/clear - I context switch between different tasks"
-  - "/compact - I have long conversations I want to continue"
-  - "/model - I want to optimize for speed vs. quality"
-  - "Multiple windows - I multitask a lot"
+
+**Ask:** "Which of these scenarios sounds most like how you work?"
+
+Options:
+- "I context switch a lot - /clear will be my friend"
+- "I have long working sessions - /compact sounds useful"
+- "I need different quality levels - /model switching is interesting"
+- "I multitask - multiple windows sounds perfect"
 
 Wait for response, acknowledge their choice.
+
+**CHECKPOINT: Update progress.md** - Change "Last checkpoint" to: `Section 3 - Core Commands Learned`
 
 ---
 
 ## SECTION 4: Keyboard Shortcuts
 
-> "Now for the shortcuts. These save you from reaching for the mouse."
+> "Now let's talk about shortcuts that help you work faster. These save you from reaching for the mouse."
 
 **Essential shortcuts:**
 
@@ -215,11 +238,17 @@ Wait for response, acknowledge their choice.
 | `Up Arrow` | Recall previous message |
 | `Tab` | Accept autocomplete suggestion |
 
-> "The most important one is **Escape** - if Claude is going down the wrong path, just hit Escape and redirect."
+> "The most important one is **Escape** - if Claude is going down the wrong path, just hit Escape and redirect. You don't have to wait for it to finish."
 
-**Ask:** "Makes sense?"
+Use AskUserQuestion:
 
-Wait for confirmation.
+**Ask:** "Ready to continue to custom commands?"
+
+Options:
+- "Yes, let's keep going"
+- "I want to practice shortcuts first"
+
+If they want to practice, let them try a few, then continue.
 
 ---
 
@@ -236,7 +265,16 @@ Explain:
 - Standardize outputs (PRD templates, meeting note formats)
 - Run complex multi-step processes with one command
 
-**Ask:** "What's a workflow you do repeatedly that would be nice to automate with a single command?"
+Use AskUserQuestion:
+
+**Ask:** "What's a workflow you do repeatedly that might be nice to automate with a single command?"
+
+Options:
+- "Let me think of one..."
+- "Weekly status updates or reports"
+- "Formatting meeting notes"
+- "Creating PRDs or user stories"
+- "I'm not sure yet"
 
 Wait for response.
 
@@ -248,31 +286,26 @@ Based on their answer, offer to build it:
 
 > "Want to turn that into a command right now? It doesn't have to be complicated - even a simple one can save you time."
 
-**Suggest ideas based on their CLAUDE.md:**
-
-Reference their role and responsibilities to suggest relevant commands. For example:
-- If they do standups → `/standup` - generates a quick standup update
-- If they write PRDs → `/prd-outline` - creates a PRD skeleton
-- If they do meeting notes → `/meeting-prep` - generates agenda from a topic
-- If they do customer interviews → `/interview-questions` - generates questions from a hypothesis
-
-> "Just tell me what you want in plain English. Something like 'I want a command that takes a meeting topic and gives me an agenda with 3-5 discussion points.'"
-
-**Ask:** "Want to build one now, or skip for later?"
-
 Use AskUserQuestion:
-- Options:
-  - "Yes, let's build one"
-  - "Not right now"
+
+**Ask:** "Want to build a custom command now?"
+
+Options:
+- "Yes, let's build one"
+- "Not right now - I'll do it later"
 
 **If yes:**
+> "Just describe what you want in plain English. Something like 'I want a command that takes a meeting topic and gives me an agenda with 3-5 discussion points.'"
+
 - Ask them to describe what they want in natural language
 - Create a simple command file in `.claude/commands/` based on their description
 - Have them try it out immediately
 - Celebrate their first custom command!
 
 **If no:**
-> "No problem! You can ask me to create a command anytime - just describe what you want and I'll build it for you."
+> "No problem! You can ask me to create a command anytime - just describe what you want and I'll build it for you. Seriously, just say 'create a command that does X' and I'll handle the file creation."
+
+**CHECKPOINT: Update progress.md** - Change "Last checkpoint" to: `Section 6 - Custom Commands`
 
 ---
 
@@ -285,15 +318,16 @@ Use AskUserQuestion:
 - Download and use commands that fit your workflow
 - **Submit your own** commands to help the team
 
-> "When you build something useful, share it! And before building something from scratch, check if someone already made it."
+> "It's new and growing - the more people contribute, the more useful it becomes. When you build something useful, share it! And before building something from scratch, check if someone already made it."
+
+Use AskUserQuestion:
 
 **Ask:** "Have you checked out accesso.io yet?"
 
-Use AskUserQuestion:
-- Options:
-  - "Yes, I've browsed it"
-  - "No, but I will now"
-  - "Didn't know it existed"
+Options:
+- "Yes, I've browsed it"
+- "No, but I will now"
+- "Didn't know it existed"
 
 Wait for response.
 
@@ -306,22 +340,36 @@ Wait for response.
 > "Let's make sure you're comfortable with the basics. Try these:"
 
 **Exercise 1:**
-> "Type `/help` to see the full list of available commands."
+> "Type `/help` to see the full list of available commands and skills."
 
-Wait for them to try.
+Wait for them to try, then follow up:
+
+Use AskUserQuestion:
+
+**Ask:** "Did you see the list? Notice how many skills and commands are available."
+
+Options:
+- "Yes, I see it - lots available!"
+- "Yes, but I have a question"
 
 **Exercise 2:**
-> "Type `/memory` to see what files Claude reads for context (including your CLAUDE.md)."
+> "Now type `/memory` to see what files Claude reads for context (including your CLAUDE.md)."
 
 Wait for them to try.
 
-> "Great! You now know how to navigate Claude Code like a pro."
+Use AskUserQuestion:
+
+**Ask:** "Great! You can see your CLAUDE.md and any other context files. Ready to wrap up?"
+
+Options:
+- "Yes, let's wrap up"
+- "I want to try something else first"
 
 ---
 
 ## SECTION 9: Quick Reference Card
 
-> "Before we wrap up, here's your cheat sheet:"
+> "Before we wrap up, here's your cheat sheet. This is also saved in `reference/useful-commands.md` for future reference:"
 
 **When to Use What:**
 
@@ -334,20 +382,7 @@ Wait for them to try.
 | Need the best quality output | `/model` → Opus |
 | Need a quick answer | `/model` → Haiku |
 | Want to work on two things at once | Open a new terminal window |
-
-**Built-in Commands:**
-
-| Category | Command | Purpose |
-|----------|---------|---------|
-| **Session** | `/clear` | Start fresh (keeps CLAUDE.md) |
-| | `/compact` | Compress context (keeps working) |
-| | `/rewind` | Go back and try again |
-| | `/context` | Check usage budget |
-| **Info** | `/help` | All commands |
-| | `/cost` | Token usage |
-| | `/memory` | Memory files |
-| | `/status` | Session info |
-| **Settings** | `/model` | Change model (Haiku/Sonnet/Opus) |
+| Forgot what's available | `/help` |
 
 **Key Differences:**
 > `/clear` = Start completely over. `/compact` = Keep going with more room. `/rewind` = Go back to a specific point.
@@ -360,10 +395,16 @@ Wait for them to try.
 **Custom Commands:**
 - Live in `.claude/commands/`
 - Run with `/command-name`
-- Browse & share at **accesso.io**
+- Browse & share at **accesso.io** (new and growing!)
 - **Ask me anytime** to build one for you
 
-**Ask:** "Any questions about commands or shortcuts?"
+Use AskUserQuestion:
+
+**Ask:** "Any questions about commands or shortcuts before we wrap up?"
+
+Options:
+- "No, I'm good"
+- "Yes, I have a question"
 
 Answer any questions.
 
@@ -371,13 +412,15 @@ Answer any questions.
 
 ## SECTION 10: Wrap Up & Save Progress
 
-**Update lessons/progress.md** by appending:
+**Finalize progress:** Remove the "(In Progress)" entry and replace with the completed entry:
+
+**Update lessons/progress.md** by replacing the "(In Progress)" entry with:
 
 ```markdown
 ## Lesson 3: Commands & Power User Features ✓
 **Completed:** [Today's date]
 
-**Most useful command:** [Their answer from Section 3]
+**Work style match:** [Their answer from Section 3 - context switching/long sessions/etc.]
 **Workflow to automate:** [Their answer from Section 5]
 **Custom command built:** [Yes/No - and name if yes]
 
@@ -387,16 +430,31 @@ Answer any questions.
 Then tell them:
 
 > "You've completed Lesson 3! You now know:
-> - Built-in commands for managing your session
-> - Keyboard shortcuts for speed
+> - Built-in commands for managing your session (`/clear`, `/compact`, `/rewind`, `/context`)
+> - Keyboard shortcuts for speed (`Escape`, `Ctrl+C`, `Up Arrow`)
 > - Custom commands and where to find more (accesso.io)
 >
-> **Remember:** You can ask me to build a custom command anytime. Just describe what you want in plain English.
+> **Remember:**
+> - Type `/help` anytime to see all available commands and skills
+> - You can ask me to build a custom command anytime - just describe what you want in plain English
 >
-> **What's next:**
-> - `/lesson4` - Subagents for parallel research and multiple perspectives
+> **Quick Reference:** Everything's saved in `reference/useful-commands.md`"
+
+Use AskUserQuestion:
+
+**Ask:** "Ready to continue to Lesson 4?"
+
+Options:
+- "Yes! (/lesson4)"
+- "Not right now - I'll come back later"
+
+If they choose to continue:
+> "To start Lesson 4, type: `/lesson4`"
 >
-> **Pro tip:** Type `/` whenever you forget what's available."
+> "Lesson 4 is about subagents - Claude's ability to do parallel research and give you multiple perspectives. It's one of the most powerful features for PM work."
+
+If they choose later:
+> "No problem! When you're ready, just type `/lesson4` to continue. Pro tip: type `/` whenever you forget what's available. See you then!"
 
 ---
 
@@ -412,3 +470,4 @@ Throughout this lesson:
 - When suggesting custom commands, use their actual responsibilities from CLAUDE.md
 - If they build a command, make it genuinely useful - not a throwaway example
 - Reinforce that they can ask for commands anytime - lower the barrier
+- After every command they try, immediately provide an AskUserQuestion to continue

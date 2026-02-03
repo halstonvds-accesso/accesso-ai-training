@@ -8,9 +8,36 @@ This is **Lesson 0: Course Introduction**. Your job is to welcome the learner, s
 
 - Conversational and encouraging, not lecture-y
 - Break content into digestible chunks
-- **CRITICAL:** After each section, ask a question or prompt that requires user input before continuing
-- Use the AskUserQuestion tool for structured choices, or ask open questions directly
+- **CRITICAL:** After each section, use AskUserQuestion with selectable options so the user always knows how to continue
+- **CRITICAL:** Never leave the user at a blank prompt - always provide clear options to continue
 - Keep it moving - this intro should take ~10-15 minutes max
+
+---
+
+## IMPORTANT: Workspace Structure
+
+**This training folder lives INSIDE the user's main vault/workspace.**
+
+Expected structure:
+```
+my-vault/                          ← User's main workspace (VAULT ROOT)
+├── CLAUDE.md                      ← Created in Lesson 1 (HERE, not in training folder)
+├── passport/                      ← User's folders (created in Lesson 2, HERE)
+├── interviews/
+├── research/
+└── accesso-ai-training/           ← This training folder
+    ├── .claude/commands/          ← Lesson commands live here
+    ├── lessons/progress.md        ← Training progress (stays here)
+    └── reference/                 ← Training reference docs (stays here)
+```
+
+**Key rules for file creation:**
+- **CLAUDE.md** → Create at `../CLAUDE.md` (vault root, OUTSIDE training folder)
+- **User folders** → Create at `../` (vault root, OUTSIDE training folder)
+- **lessons/progress.md** → Create at `lessons/progress.md` (INSIDE training folder)
+- **Reference docs** → Stay in `reference/` (INSIDE training folder)
+
+**The user should run Claude from INSIDE this accesso-ai-training folder** for lessons to work. Their actual work files go in their vault root (parent folder).
 
 ---
 
@@ -18,23 +45,32 @@ This is **Lesson 0: Course Introduction**. Your job is to welcome the learner, s
 
 Welcome them warmly with:
 
-**"Welcome to the Claude Code course for accesso Product Managers! 👋"**
+**"Welcome to the Claude Code course for accesso Product Managers!"**
 
 Explain:
 
 - This course will teach them to use Claude Code as a PM superpower
 - It's hands-on - they'll build real things they actually use
-- Each lesson is a wizard (like this one) - interactive, not passive
+- Each lesson is interactive and dynamic - the more info you put in, the more I learn about you and personalize each lesson going forward
 - By the end, they'll have a complete AI-enabled workflow
 
 Then share these helpful references:
 
-> "Quick note before we dive in - two commands you can use anytime during this course:
+> "Quick note before we dive in:
 >
-> - **`/course-map`** - See all 19 lessons and what each covers
+> **How this workspace is set up:**
+> - This training folder sits inside your main vault/workspace
+> - When we create your CLAUDE.md and work folders, they go in your **main vault** (one level up from here)
+> - Training files like your progress stay in this folder
+> - So your actual PM work lives at the vault level, and training materials stay organized here
+>
+> **Helpful commands during this course:**
+> - **`/course-map`** - See all lessons and what each covers
 > - **`/training-helpful-tips`** - Troubleshooting, file conversions, getting unstuck
 >
-> **Important:** Claude Code is powerful, but it's not the only tool. If you ever feel boxed in - large files, images, or just want to think through something conversationally - **Claude Desktop (claude.ai) works great too.** Use whatever gets the job done."
+> **Important:** Claude Code is powerful, but it's not the only tool. If you ever feel boxed in - large files, images, or just want to think through something conversationally - **Claude Desktop (claude.ai) works great too.** Use whatever gets the job done.
+>
+> Also, you don't need to transfer every document you have into this workspace. Start fresh and bring in **only what you need** as you go. Less clutter, more focus."
 
 Then ask them a quick question to proceed:
 
@@ -48,25 +84,26 @@ Wait for their response before continuing.
 
 After they respond, greet them by name and explain the old way vs. new way:
 
-**The Old Way (3-6 months):**
+**The Old Way (months of work):**
 - Weeks of meetings and discussions
 - Long PRDs written in isolation
 - Build first, validate later (if at all)
 - Hope customers want what we built
 
-**The New Way (4 weeks):**
-- Week 1: Customer discovery with AI-assisted synthesis
-- Week 2: Prototype and validate with real customers
-- Week 3: Hand off validated requirements to engineering
-- Week 4: Ship MVP, collect real data
+**The New Way (days, not months):**
+- Customer discovery with AI-assisted synthesis
+- Prototype and validate with real customers quickly
+- Hand off validated requirements to engineering
+- Ship MVP, collect real data
 
 Then use AskUserQuestion to ask:
 
 **Ask:** "Which of these sounds most like your current reality?"
-- Options:
-  - "The old way - lots of meetings, slow validation"
-  - "Somewhere in between - trying to move faster"
-  - "Already moving fast - want to level up further"
+
+Use AskUserQuestion with options:
+- "The old way - lots of meetings, slow validation"
+- "Somewhere in between - trying to move faster"
+- "Already moving fast - want to level up further"
 
 Wait for response before continuing.
 
@@ -74,28 +111,39 @@ Wait for response before continuing.
 
 ## SECTION 3: What You'll Learn
 
-Acknowledge their answer briefly (tailor your response based on what they picked), then outline the four modules:
+Acknowledge their answer briefly (tailor your response based on what they picked), then outline what they'll learn:
 
-**Module 1: Foundations (Lessons 1-7)**
-Your AI toolkit - CLAUDE.md setup, file navigation, agents, customer interview workflows
+> "This course is organized into 6 core lessons that build on each other:"
 
-**Module 2: Daily PM Work (Lessons 8-11)**
-AI for the job - competitive research, story writing, meeting notes, feedback analysis
+**Lesson 1: Your CLAUDE.md**
+Set up your personalized context file so Claude knows who you are, what you work on, and how you like to work.
 
-**Module 3: Integration (Lessons 12-15)**
-Connect everything - custom skills, Jira, Confluence, browser automation
+**Lesson 2: Workspace & Files**
+Organize your workspace and learn to work with files using plain English.
 
-**Module 4: Mastery (Lessons 16-20)**
-Cultural transformation - prototyping workflows, "good enough" mindset, saying NO with data
+**Lesson 3: Commands & Shortcuts**
+Master the commands and keyboard shortcuts that make you faster.
 
-Then ask:
+**Lesson 4: Subagents**
+Run parallel research and get multiple perspectives on decisions.
 
-**Ask:** "Which module are you most excited about?"
-- Options:
-  - "Foundations - I want solid fundamentals first"
-  - "Daily Work - I need help with my day-to-day tasks"
-  - "Integration - Connecting to Jira/Confluence is huge for me"
-  - "Mastery - I want the mindset shifts and advanced stuff"
+**Lesson 5: Atlassian Integration**
+Connect Jira and Confluence so you can work with them naturally.
+
+**Lesson 6: Practical Workflows**
+Learn workflows tailored to YOUR role - stories, PRDs, research, meetings, and more.
+
+> "Each lesson builds your toolkit. By the end, you'll have a personalized AI workflow for your actual job."
+
+Then use AskUserQuestion:
+
+**Ask:** "Which of these are you most looking forward to learning?"
+
+Use AskUserQuestion with options:
+- "CLAUDE.md setup - I want Claude to understand my context"
+- "Subagents - parallel research and perspectives sounds powerful"
+- "Atlassian integration - I live in Jira and Confluence"
+- "Practical workflows - I just want to get things done faster"
 
 Wait for response before continuing.
 
@@ -103,22 +151,29 @@ Wait for response before continuing.
 
 ## SECTION 4: How Lessons Work
 
-Acknowledge their excitement, then explain the lesson format:
+Acknowledge their interest, then explain the lesson format:
 
-Every lesson follows this pattern:
+> "Every lesson follows this pattern:"
+
 1. **Welcome & Context** - What you'll learn and why
 2. **Concept** - Brief explanation (not a lecture)
-3. **Guided Practice** - Wizard Q&A building real artifacts
-4. **Try It Yourself** - Hands-on challenge
+3. **Guided Practice** - Interactive Q&A building real artifacts
+4. **Try It Yourself** - Hands-on with your actual work
 5. **Checkpoint** - Verify before moving on
 
 **Key principle:** You'll build something real in every lesson. No hypotheticals. No "imagine if..." - actual artifacts you'll use in your job.
 
-Then ask:
+**Key difference from ChatGPT:** This isn't just chat. Claude Code works in your workspace, creates files, connects to your tools, and remembers your context. The more specific you are about YOUR work, the more useful it becomes.
 
-**Ask:** "Ready to see what you'll build? (Just type 'yes' or 'let's go')"
+Then use AskUserQuestion:
 
-Wait for response.
+**Ask:** "Ready to see what you'll build?"
+
+Use AskUserQuestion with options:
+- "Yes, show me!"
+- "I have a question first"
+
+If they have a question, answer it, then ask again if they're ready.
 
 ---
 
@@ -126,40 +181,42 @@ Wait for response.
 
 After they confirm, share the concrete outcomes:
 
-By the end of this course, you'll have:
+> "By the end of this course, you'll have:"
 
 - **Your CLAUDE.md** - Persistent context that makes Claude YOUR assistant
-- **Customer interview system** - Prep, capture, synthesize automatically
-- **Research workflows** - Competitive intel on demand
-- **Story generation** - From customer feedback to Jira-ready stories
-- **Custom skills** - Your own `/commands` for repeated workflows
-- **Connected tools** - Jira, Confluence, browser all wired up
-- **Decision frameworks** - "Good enough" criteria, validation checklists
+- **Organized workspace** - Folders and structure for your work
+- **Custom commands** - Your own `/commands` for repeated workflows
+- **Connected tools** - Jira and Confluence wired up
+- **Research workflows** - Competitive intel and parallel analysis on demand
+- **Story generation** - From ideas to Jira-ready stories
+- **Meeting capture** - Notes to action items automatically
 
-This isn't theory. You'll build each of these.
+> "This isn't theory. You'll build each of these."
 
 Then ask:
 
 **Ask:** "What's one workflow or task you do repeatedly that you wish was faster?"
 
-Wait for their response - this is valuable context for later lessons.
+Wait for their response - this is valuable context for Lesson 6 where we'll tailor workflows to them.
 
 ---
 
 ## SECTION 6: Wrap Up & Next Steps
 
-Acknowledge their answer and note that they might build a custom skill for exactly that in a later lesson.
+Acknowledge their answer:
+
+> "Great - [reference their answer]. We'll make sure Lesson 6 covers workflows that help with exactly that. The course is designed to learn about you as we go, so by the time we get there, I'll have a good sense of what will be most useful for you."
 
 Then wrap up:
 
 **You're ready for Lesson 1!**
 
-In Lesson 1, you'll create your personal CLAUDE.md file - this is the foundation that makes everything else work. It gives Claude persistent context about:
-- Your role and products
-- Your working style
-- What success looks like for you
-
-This takes about 20 minutes and you'll use it every single day.
+> "In Lesson 1, you'll create your personal CLAUDE.md file - this is the foundation that makes everything else work. It gives Claude persistent context about:
+> - Your role and products
+> - Your working style
+> - What success looks like for you
+>
+> This takes about 20 minutes and you'll use it every single day."
 
 **Before they leave, save their progress:**
 
@@ -178,7 +235,7 @@ This file tracks your journey through the Claude Code for PMs course.
 **Completed:** [Today's date]
 
 **Current reality:** [Their answer - old way/in between/moving fast]
-**Most excited about:** [Their module choice]
+**Most looking forward to:** [Their answer about which lesson]
 **Workflow to speed up:** [Their answer about repetitive task]
 
 ---
@@ -188,7 +245,19 @@ Then tell them:
 
 > "I've created a `lessons/` folder to track your progress. Each lesson will update this so you never have to repeat yourself - I'll remember everything."
 
-**To start Lesson 1, type:** `/lesson1`
+Use AskUserQuestion:
+
+**Ask:** "Ready to start Lesson 1?"
+
+Use AskUserQuestion with options:
+- "Yes, let's go! (/lesson1)"
+- "Not right now - I'll come back later"
+
+If they choose to continue, tell them:
+> "To start Lesson 1, type: `/lesson1`"
+
+If they choose later:
+> "No problem! When you're ready, just type `/lesson1` to continue. See you then!"
 
 ---
 

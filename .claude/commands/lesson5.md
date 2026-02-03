@@ -21,6 +21,33 @@ Read these files to personalize this lesson:
 - `lessons/progress.md` - Their name, previous lesson context
 - `CLAUDE.md` - Their role, products, preferences
 
+**Check for interrupted progress:**
+If `lessons/progress.md` contains "## Lesson 5: Atlassian MCP (In Progress)", the user was interrupted mid-lesson.
+
+Use AskUserQuestion:
+
+**Ask:** "Looks like you started this lesson before. Want to pick up where you left off?"
+
+Options:
+- "Yes, continue from where I was"
+- "No, start fresh"
+
+If resuming: Read the "Last checkpoint" section and skip ahead to that point.
+If starting fresh: Remove the "(In Progress)" entry and start from Section 1.
+
+---
+
+## Starting/Resuming the Lesson
+
+**Create or update progress entry (In Progress):**
+
+If this is a fresh start, add to `lessons/progress.md`:
+```markdown
+## Lesson 5: Atlassian MCP (In Progress)
+**Started:** [Today's date]
+**Last checkpoint:** Section 1 - Welcome
+```
+
 ---
 
 ## SECTION 1: Welcome
@@ -107,22 +134,51 @@ claude mcp add atlassian
 
 Guide them through the auth flow as it happens.
 
-> "Once you're authenticated, we'll verify the connection."
+> "Once you're authenticated, Claude Code needs to restart to load the MCP."
+
+**IMPORTANT - Preserve lesson progress:**
+
+> "Here's what to do:
+> 1. **Open a new terminal tab** (Cmd+T on Mac, Ctrl+Shift+T on Windows/Linux)
+> 2. Navigate to your vault folder in that new tab
+> 3. Run `claude` in the new tab
+> 4. **Come back to this tab** when you're done testing
+>
+> This way you keep your lesson progress here while testing the MCP in the other tab. Don't use `/exit` or close this window!"
+
+Use AskUserQuestion:
+
+**Ask:** "Did you open a new terminal tab and run `claude`?"
+
+Options:
+- "Yes, I have Claude running in another tab"
+- "I need help with this"
+
+If they need help, walk them through opening a new terminal tab.
+
+> "Great! Now in that **other tab**, let's verify the connection."
 
 ---
 
 ## SECTION 4: Verify the Connection
 
-After they've authenticated:
+> "In your **other terminal tab**, try asking: 'Who am I logged in as in Atlassian?'"
 
-> "Let's make sure you're connected. I'll check who you're logged in as."
+Wait for them to confirm it works.
 
-Use the `atlassianUserInfo` tool or ask:
-> "Who am I logged in as in Atlassian?"
+Use AskUserQuestion:
 
-Confirm their connection:
+**Ask:** "Did it show your Atlassian account?"
 
-> "You're connected as [their email]. Now let's set up your defaults so I know which project and space to use."
+Options:
+- "Yes, it's working!"
+- "I got an error"
+
+If error, help troubleshoot (check `claude mcp list`, re-authenticate).
+
+> "You're connected as [their email]. Now let's set up your defaults. You can continue in either tab - just come back here for the lesson."
+
+**CHECKPOINT: Update progress.md** - Change "Last checkpoint" to: `Section 4 - MCP Installed & Verified`
 
 ---
 
@@ -238,6 +294,8 @@ Tell them:
 
 > "Done! I've added your Atlassian configuration to your CLAUDE.md. This includes your defaults AND the guardrails, so I'll always follow these rules."
 
+**CHECKPOINT: Update progress.md** - Change "Last checkpoint" to: `Section 8 - Configuration Complete`
+
 ---
 
 ## SECTION 9: Try It Out
@@ -305,7 +363,9 @@ Wait for them to try.
 
 ## SECTION 11: Wrap Up & Save Progress
 
-**Update lessons/progress.md** by appending:
+**Finalize progress:** Remove the "(In Progress)" entry and replace with the completed entry:
+
+**Update lessons/progress.md** by replacing the "(In Progress)" entry with:
 
 ```markdown
 ## Lesson 5: Atlassian MCP Setup & Usage ✓

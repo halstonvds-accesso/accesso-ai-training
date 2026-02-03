@@ -27,6 +27,34 @@ Read these files to personalize this lesson:
 3. Suggest workflows that match their actual work
 4. Give examples using their real context
 
+**Check for interrupted progress:**
+If `lessons/progress.md` contains "## Lesson 6: Practical Workflows (In Progress)", the user was interrupted mid-lesson.
+
+Use AskUserQuestion:
+
+**Ask:** "Looks like you started this lesson before. Want to pick up where you left off?"
+
+Options:
+- "Yes, continue from where I was"
+- "No, start fresh"
+
+If resuming: Read "Workflows selected" and "Last workflow completed" to skip to the next workflow.
+If starting fresh: Remove the "(In Progress)" entry and start from Section 1.
+
+---
+
+## Starting/Resuming the Lesson
+
+**Create or update progress entry (In Progress):**
+
+If this is a fresh start, add to `lessons/progress.md`:
+```markdown
+## Lesson 6: Practical Workflows (In Progress)
+**Started:** [Today's date]
+**Workflows selected:** [to be filled after Section 2]
+**Last workflow completed:** None yet
+```
+
 ---
 
 ## SECTION 1: Welcome
@@ -73,6 +101,7 @@ Based on their role, products, and responsibilities from CLAUDE.md and progress.
 | Do sprint planning | Sprint Planning & Refinement |
 | Write release notes | Release Notes Generation |
 | Do stakeholder communication | Status Updates & Reports |
+| Work with PDFs, reports, contracts | PDF & Document Processing |
 
 **Present 3-4 options tailored to them:**
 
@@ -92,6 +121,8 @@ Use AskUserQuestion with multiSelect: true (let them pick 2-3):
 
 Wait for their selection.
 
+**CHECKPOINT: Update progress.md** - Update "Workflows selected" with their choices.
+
 **If they choose "Something else":**
 > "What workflow would be most helpful for you? Describe what you do repeatedly that you'd like to speed up."
 
@@ -109,6 +140,8 @@ For each workflow they selected, teach it in a dedicated section. Use the workfl
 3. A hands-on example using their context
 4. Tips and variations
 5. Quick reference
+
+**CHECKPOINT after each workflow:** Update "Last workflow completed" in progress.md with the workflow name.
 
 ---
 
@@ -175,6 +208,25 @@ Process their notes and show them:
 
 > "This workflow helps you turn ideas, feedback, or requirements into well-structured user stories ready for Jira."
 
+### Your Story Preferences
+
+> "Before we dive in, let me ask about how your team does stories."
+
+Use AskUserQuestion:
+
+**Ask:** "How does your team prefer user stories?"
+
+Options:
+- "Concise - minimal details, let engineering figure out the how"
+- "Detailed - comprehensive acceptance criteria and edge cases"
+- "Standard format - typical user story structure works fine"
+- "I have an example I can share"
+
+**If they have an example:**
+> "Great! Paste an example story you've written (or that your team uses) and I'll match that style."
+
+Wait for their example and note the format for this workflow.
+
 ### The Pattern
 
 > "Just describe what you want to build and I'll help structure it:"
@@ -186,7 +238,7 @@ Process their notes and show them:
 
 ### The Format
 
-> "I'll typically give you stories in this format:"
+> "I'll match your team's style, but here's a typical structure:"
 
 ```
 **Title:** [Short descriptive title]
@@ -488,6 +540,80 @@ Generate a clear update with:
 
 ---
 
+## WORKFLOW MODULE: PDF & Document Processing
+
+### What It Is
+
+> "This workflow helps you extract information from PDFs, reports, contracts, Excel files, and other documents - without manually reading through them."
+
+### The Pattern
+
+> "Just give me a document and tell me what you need:"
+
+- "Summarize this PDF"
+- "Extract the key points from this report"
+- "What are the main terms in this contract?"
+- "Pull the data from this spreadsheet and show me trends"
+- "Compare these two documents"
+
+### How to Share Documents
+
+> "You have a few options for getting documents to me:"
+
+| Method | How | Best For |
+|--------|-----|----------|
+| **File path** | "Read the PDF at /path/to/file.pdf" | Files already in your workspace |
+| **Drag and drop** | Drag file into terminal | Quick one-off documents |
+| **Copy/paste** | Paste text content directly | When you just need the text |
+
+**Tip - Claude Desktop Alternative:**
+
+> "If you're having trouble with a large or complex document, **Claude Desktop (claude.ai)** makes it easy - just drag and drop files directly into the chat. It's a great complement to Claude Code for document-heavy work."
+
+### Try It
+
+> "Do you have a PDF or document you'd like to process? You can:
+> - Give me a file path if it's in your workspace
+> - Drag a file into the terminal
+> - Or describe a document type you work with often"
+
+Use AskUserQuestion:
+
+**Ask:** "How would you like to try this?"
+
+Options:
+- "I have a file to try"
+- "Just show me examples of what I can ask"
+- "Skip this - I'll try it later"
+
+**If they have a file:**
+Process it and show them:
+- Summary of contents
+- Key points extracted
+- Any data or tables found
+- Suggested follow-up questions
+
+**If they want examples:**
+> "Here are things you can ask once you have a document:
+> - 'What are the 5 most important points in this report?'
+> - 'Extract all the dates and deadlines mentioned'
+> - 'Summarize each section in one sentence'
+> - 'What questions should I ask after reading this?'"
+
+### Quick Reference
+
+| What You Want | How to Ask |
+|---------------|------------|
+| Summary | "Summarize this PDF" |
+| Key points | "What are the main takeaways?" |
+| Extract data | "Pull the numbers/dates/names from this" |
+| Compare docs | "Compare these two documents" |
+| Specific info | "Find mentions of [topic] in this doc" |
+
+**Alternative:** For drag-and-drop ease, use **Claude Desktop (claude.ai)** - great for large PDFs and image-heavy documents.
+
+---
+
 ## FINAL SECTION: Wrap Up
 
 After teaching their selected workflows:
@@ -505,7 +631,9 @@ Answer any questions.
 
 ## Save Progress
 
-**Update lessons/progress.md** by appending:
+**Finalize progress:** Remove the "(In Progress)" entry and replace with the completed entry:
+
+**Update lessons/progress.md** by replacing the "(In Progress)" entry with:
 
 ```markdown
 ## Lesson 6: Practical Workflows ✓
@@ -514,7 +642,7 @@ Answer any questions.
 **Workflows learned:**
 - [List the workflows they chose]
 
-**Most useful workflow:** [Ask them which one they're most excited to use]
+**Most useful workflow:** [Ask them which one they'll use first or most often]
 
 ---
 

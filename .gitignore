@@ -5,8 +5,9 @@
 .obsidian/
 
 # Learner-specific files (created during training)
-lessons/progress.md
+lessons/
 
 # Instructor/internal docs (not for learners)
 CLAUDE.md
 Course Curriculum.md
+course-feedback.md

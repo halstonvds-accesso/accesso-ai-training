@@ -8,7 +8,8 @@ This lesson teaches PMs how to talk to Claude naturally, organize their workspac
 
 - Conversational and encouraging
 - Break into sections, require user input before proceeding
-- Use AskUserQuestion for structured choices, direct questions for open-ended
+- **CRITICAL:** Use AskUserQuestion with selectable options at every pause - never leave user at blank prompt
+- **CRITICAL:** Always make it clear how to continue the lesson
 - This should take ~30 minutes
 - **CRITICAL:** Use their context from previous lessons - don't re-ask what you already know
 
@@ -18,9 +19,36 @@ This lesson teaches PMs how to talk to Claude naturally, organize their workspac
 
 Read these files to personalize this lesson:
 - `lessons/progress.md` - Their name, what they're excited about, workflow to speed up
-- `CLAUDE.md` - Their role, products, responsibilities, preferences
+- `CLAUDE.md` (in parent directory) - Their role, products, responsibilities, preferences
 
 Use this context throughout. Reference their specific products and responsibilities when giving examples.
+
+**Check for interrupted progress:**
+If `lessons/progress.md` contains "## Lesson 2: Workspace Setup (In Progress)", the user was interrupted mid-lesson.
+
+Use AskUserQuestion:
+
+**Ask:** "Looks like you started this lesson before. Want to pick up where you left off?"
+
+Options:
+- "Yes, continue from where I was"
+- "No, start fresh"
+
+If resuming: Read the "Last checkpoint" section and skip ahead to that point.
+If starting fresh: Remove the "(In Progress)" entry and start from Section 1.
+
+---
+
+## Starting/Resuming the Lesson
+
+**Create or update progress entry (In Progress):**
+
+If this is a fresh start, add to `lessons/progress.md`:
+```markdown
+## Lesson 2: Workspace Setup (In Progress)
+**Started:** [Today's date]
+**Last checkpoint:** Section 1 - Welcome
+```
 
 ---
 
@@ -30,9 +58,13 @@ Greet them by name:
 
 > "Welcome back, [Name]! Today we're setting up your workspace and learning how to work with files. But first, let's talk about how to actually talk to me."
 
+Use AskUserQuestion:
+
 **Ask:** "Ready to learn the secret to getting great results from AI?"
 
-Wait for response.
+Options:
+- "Yes, tell me!"
+- "I think I already know, but go ahead"
 
 ---
 
@@ -56,25 +88,25 @@ Explain the mindset:
 - "Make this shorter"
 - "What are the top 3 complaints from these interviews?"
 
-**Overcomplicated (don't do this):**
+**Overcomplicated (unnecessary):**
 - "Please utilize your advanced language processing capabilities to locate and retrieve all Product Requirements Documents created within the previous 30-day period"
-- "I would like you to summarize the following document, focusing on extracting key themes, relevant insights, and actionable takeaways"
 
-> "See the difference? The good examples are just... normal requests. That's all you need."
+> "See the difference? Just talk normally. The fancy version doesn't get better results - it just takes longer to type."
 
 **Key principle - I'll ask if I need more:**
 
 > "One more thing: **I won't guess or make things up.** If I don't have enough information to answer your question, I'll ask you for more context. So don't worry about giving me perfect instructions - just start talking and we'll figure it out together."
 
+Use AskUserQuestion:
+
 **Ask:** "Does that feel different from how you expected to interact with AI?"
 
-Use AskUserQuestion:
-- Options:
-  - "Yes - I thought I needed to be more formal"
-  - "Kind of - I wasn't sure what to expect"
-  - "No - this is how I already talk to AI"
+Options:
+- "Yes - I thought I needed to be more formal"
+- "Kind of - I wasn't sure what to expect"
+- "No - this is how I already talk to AI"
 
-Wait for response, acknowledge.
+Wait for response, acknowledge briefly, then continue.
 
 ---
 
@@ -86,13 +118,15 @@ Explain why this matters:
 
 > "A well-organized workspace means you can find anything in seconds. And when you combine that with just asking me in plain English, you can extract insights, synthesize across documents, and process information way faster than doing it manually."
 
+Use AskUserQuestion:
+
 **Ask:** "How organized would you say your current files and documents are outside of this workspace?"
 
-Use AskUserQuestion:
-- Options:
-  - "Pretty organized - I have a system"
-  - "Somewhat organized - could be better"
-  - "Chaos - files everywhere"
+Options:
+- "Pretty organized - I have a system"
+- "Somewhat organized - could be better"
+- "Chaos - files everywhere"
+- "Starting fresh - I have nothing to bring in yet"
 
 Wait for response, acknowledge without judgment.
 
@@ -104,13 +138,14 @@ Reference their products from CLAUDE.md:
 
 > "I see you work on [their products]. Let's think about a folder structure that fits how you work."
 
+Use AskUserQuestion:
+
 **Ask:** "Do you work on multiple products that should be kept separate, or is everything interconnected?"
 
-Use AskUserQuestion:
-- Options:
-  - "Multiple products - keep them separate"
-  - "One main product - everything together"
-  - "Mix - some shared, some product-specific"
+Options:
+- "Multiple products - keep them separate"
+- "One main product - everything together"
+- "Mix - some shared, some product-specific"
 
 Wait for response.
 
@@ -118,14 +153,24 @@ Based on their responsibilities from CLAUDE.md, suggest relevant folders:
 
 > "Based on your responsibilities, here are some folders that might be useful as a starting point:"
 
-Show them relevant options based on what they do:
-- If they do PRDs/stories → `prds/`, `user-stories/`
-- If they do customer interviews → `interviews/`, `customer-feedback/`
-- If they do competitive research → `research/`
+Show them relevant options based on what they do (reference their CLAUDE.md):
+- If they do PRDs/stories → `[product]/prds/`, `[product]/stories/`
+- If they do customer interviews → `interviews/notes/`, `interviews/synthesis/`
+- If they do competitive research → `research/competitive/`, `research/market/`
 - If they do roadmap work → `roadmaps/`
 - If they do meeting notes → `meetings/`
 
+Use AskUserQuestion:
+
 **Ask:** "Which of these would be most useful for you right now? Don't worry about getting it perfect - we can always add more later."
+
+Options (customize based on their responsibilities):
+- "Product folders with PRDs and stories"
+- "Interviews and customer feedback"
+- "Research (competitive, market)"
+- "Meetings and notes"
+- "All of the above - give me a full structure"
+- "I'll just start with basics for now"
 
 Wait for response.
 
@@ -135,30 +180,65 @@ Wait for response.
 
 Based on their answers, propose a simple starting structure:
 
-> "Here's a simple structure to start with. The goal is to start small and expand as you need to - you can always add folders, rename things, or reorganize later. Nothing is set in stone."
+> "Here's a structure to start with. The goal is to start small and expand as you need to - you can always add folders, rename things, or reorganize later. Nothing is set in stone."
 
-Show a structure like:
+Show a structure customized to their needs. Example:
 ```
-/[product-name]/
-  /prds/
-  /research/
-/interviews/
-/meetings/
+[product-name]/
+  prds/
+  stories/
+  specs/
+research/
+  competitive/
+  market/
+interviews/
+  notes/
+  synthesis/
+meetings/
 ```
 
-Adapt based on their responses - single product vs. multiple, their key responsibilities. Keep it minimal.
+Adapt based on their responses - single product vs. multiple, their key responsibilities. Keep it minimal but include subfolders.
 
-**Ask:** "Does this feel like a good starting point? Feel free to add, remove, or change anything."
+Use AskUserQuestion:
 
-Wait for response, adjust as needed.
+**Ask:** "Does this feel like a good starting point? Feel free to suggest changes."
 
-Then confirm:
+Options:
+- "Looks good - create it!"
+- "I want to add something"
+- "I want to remove something"
+- "Let me describe what I need instead"
 
-**Ask:** "Ready for me to create these folders?"
+If they want to adjust, make changes based on their input.
 
-Wait for confirmation, then use Bash to create the folder structure with `mkdir -p`.
+**IMPORTANT - FILE LOCATION:**
+Create folders in the **PARENT directory** (the user's vault root), NOT inside this training folder.
 
-> "Done! Remember, this is just a starting point. As your workflow evolves, we can adjust the structure anytime."
+**Path:** Use `../` prefix for all folders (one level up from accesso-ai-training)
+
+Example commands:
+```bash
+mkdir -p ../passport/prds ../passport/stories
+mkdir -p ../interviews/notes ../interviews/synthesis
+mkdir -p ../research/competitive ../research/market
+mkdir -p ../meetings
+```
+
+Example: If user is in `/vault/accesso-ai-training/`, create at `/vault/passport/`, `/vault/interviews/`, etc.
+
+Tell the user: "I'm creating these folders in your main vault (one level up from the training folder) - that's where your actual work will live."
+
+> "Done! I've created these folders in your main vault. Remember, this is just a starting point. As your workflow evolves, we can adjust the structure anytime - just ask me."
+
+Use AskUserQuestion:
+
+**Ask:** "Ready to learn how to find and work with files?"
+
+Options:
+- "Yes, continue"
+- "Wait, I want to adjust the folders"
+
+**CHECKPOINT: Update progress.md** - Change "Last checkpoint" to: `Section 5 - Folder Structure Created`
 
 ---
 
@@ -176,9 +256,15 @@ Give examples relevant to their work:
 >
 > Just describe what you want, and I'll find it. No special syntax needed."
 
-**Ask:** "Makes sense?"
+Use AskUserQuestion:
 
-Wait for confirmation.
+**Ask:** "Got it? Ready for the next part about working with files?"
+
+Options:
+- "Yes, continue"
+- "Can you give me more examples?"
+
+If they want more examples, provide 2-3 more relevant to their work.
 
 ---
 
@@ -198,25 +284,31 @@ Wait for confirmation.
 **Images:** Get insights from screenshots
 > "Share a screenshot and ask 'what's this showing?' or 'extract the text from this'"
 
+**PDFs & Documents:** Process files directly
+> "Drop in a PDF or doc and say 'summarize this' or 'extract the requirements from this'"
+
 **Web:** Pull in external information
 > "Say 'look up [competitor]' or 'find recent news about [topic]'"
 
+Use AskUserQuestion:
+
 **Ask:** "Which of these sounds most useful for your day-to-day work?"
 
-Use AskUserQuestion:
-- Options:
-  - "Extract - I deal with messy docs a lot"
-  - "Synthesize - I need to find patterns across sources"
-  - "Templates - Consistent formatting matters to me"
-  - "All of them sound useful"
+Options:
+- "Extract - I deal with messy docs a lot"
+- "Synthesize - I need to find patterns across sources"
+- "PDFs/Documents - I work with a lot of files"
+- "All of them sound useful"
 
 Wait for response.
+
+**CHECKPOINT: Update progress.md** - Change "Last checkpoint" to: `Section 7 - File Operations Learned`
 
 ---
 
 ## SECTION 8: Quick Demo
 
-Based on their answer, give a quick demonstration of the capability:
+Based on their answer, offer a demonstration:
 
 **If Extract:**
 > "Here's how extract works - if you had meeting notes pasted in or a document, you'd say something like 'extract the action items from this' and I'd pull them out in a clean list."
@@ -224,17 +316,33 @@ Based on their answer, give a quick demonstration of the capability:
 **If Synthesize:**
 > "Once you have a few interview notes or research docs, you can say 'look at all my interview files and tell me what themes you see' - I'll read through them all and find the patterns."
 
-**If Templates:**
-> "If you have raw notes, you can say 'turn this into a table with columns for feature, priority, and status' and I'll restructure it for you."
+**If PDFs/Documents:**
+> "If you have a PDF or document, you can drop it in and say 'summarize this' or 'what are the key points?' - I'll process it and give you what you need."
 
 **If All:**
 > "You'll use all of these. As you add documents to your workspace, just tell me what you need and I'll handle it."
 
-**Ask:** "Want to try pulling in some web info right now? I can look something up for you - maybe a competitor or industry topic?"
+Use AskUserQuestion:
 
-If yes, demonstrate web fetch with something relevant to their products.
+**Ask:** "Want to try something right now?"
 
-If no, move on.
+Options:
+- "Yes - let me try pulling in some web info"
+- "Yes - I have a document I want to process"
+- "Not right now - let's continue with the lesson"
+
+**If they want to try web:**
+> "Give me a topic - maybe a competitor to [their product] or an industry topic you're curious about."
+
+Demonstrate web fetch with something relevant to their products.
+
+**If they want to try a document:**
+> "Go ahead and paste the content or describe what you have. I'll show you what I can do with it."
+
+Process their document and show them the capabilities.
+
+**If not right now:**
+Continue to the next section.
 
 ---
 
@@ -253,7 +361,16 @@ Share practical tips:
 **Tip 3: Chain requests**
 > "You can say 'find all my meeting notes from this week and pull out the action items' - I'll do both."
 
+**Tip 4: Just ask for help**
+> "If you're not sure how to do something, just ask me: 'How do I organize my customer feedback?' or 'What's the best way to process this interview?'"
+
+Use AskUserQuestion:
+
 **Ask:** "Any questions before we wrap up?"
+
+Options:
+- "No, I'm good - let's wrap up"
+- "Yes, I have a question"
 
 Answer any questions.
 
@@ -261,7 +378,7 @@ Answer any questions.
 
 ## SECTION 10: Wrap Up & Save Progress
 
-**Update their CLAUDE.md** by adding a Workspace Structure section after "My Team & Stakeholders":
+**Update their CLAUDE.md** (in parent directory) by adding a Workspace Structure section after "My Team & Stakeholders":
 
 ```markdown
 ## My Workspace Structure
@@ -271,11 +388,15 @@ Current folder organization (evolving as needed):
 
 Example:
 - `/passport/prds/` - PRDs for Passport product
-- `/interviews/` - Customer interview notes and synthesis
+- `/passport/stories/` - User stories
+- `/interviews/notes/` - Raw interview notes
+- `/interviews/synthesis/` - Synthesized insights
 - `/meetings/` - Meeting notes and action items
 ```
 
-**Update lessons/progress.md** by appending:
+**Finalize progress:** Remove the "(In Progress)" entry and replace with the completed entry:
+
+**Update lessons/progress.md** by replacing the "(In Progress)" entry with:
 
 ```markdown
 ## Lesson 2: Workspace Setup & Working with Files ✓
@@ -284,7 +405,7 @@ Example:
 **Folder structure created:**
 [List the folders created]
 
-**Most useful capability:** [Their answer from Section 5]
+**Most useful capability:** [Their answer from Section 7]
 
 ---
 ```
@@ -298,10 +419,23 @@ Then tell them:
 >
 > I've also updated your CLAUDE.md with your workspace structure so I'll always know where things are.
 >
-> **What's next:**
-> - `/lesson3` - Commands & power user features
+> **Quick Reference:** Check `reference/useful-commands.md` for a list of helpful commands and prompts.
 >
 > **Your homework:** Start dropping files into your new folders. Meeting notes, PRDs, research - get them in here so we can put these skills to use."
+
+Use AskUserQuestion:
+
+**Ask:** "Ready to continue to Lesson 3?"
+
+Options:
+- "Yes! (/lesson3)"
+- "Not right now - I'll come back later"
+
+If they choose to continue:
+> "To start Lesson 3, type: `/lesson3`"
+
+If they choose later:
+> "No problem! When you're ready, just type `/lesson3` to continue. See you then!"
 
 ---
 
@@ -318,3 +452,4 @@ Throughout this lesson:
 - If they seem advanced, suggest more sophisticated structures but still emphasize simplicity
 - The folder structure should reflect THEIR work, not a generic template
 - Remind them it's flexible and will grow with them
+- **Always create folders in the PARENT directory**, not the training folder

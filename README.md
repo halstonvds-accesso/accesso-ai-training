@@ -15,17 +15,24 @@ Claude Code training course for accesso Product Managers.
    cd accesso-ai-training
    ```
 
-2. Open the folder in Claude Code:
+
+2. You should now see a folder in your vault called accesso-ai-training. Change Directories (CD) into it:
+   ```bash
+   cd accesso-ai-training
+   ```
+
+
+3. Open the folder in Claude Code:
    ```bash
    claude
    ```
 
-3. Start with Lesson 0:
+4. Start with Lesson 0:
    ```
    /lesson0
    ```
 
-4. Follow the interactive lessons in order, or check `reference/Quick Start Guide.md` for the fast-track path.
+5. Follow the interactive lessons in order, or check `reference/Quick Start Guide.md` for the fast-track path.
 
 ## Course Structure
 
