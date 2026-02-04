@@ -132,11 +132,11 @@ claude --version
    - Click **Code** → **Download ZIP**
    - Save it somewhere easy to find (like Downloads)
 
-2. **Open Terminal and navigate to your vault:**
+2. **Open terminal and navigate to your Obsidian vault:**
    ```bash
-   cd ~/Documents/your-vault-name
+   cd path/to/your-vault
    ```
-   *(Replace `your-vault-name` with your actual vault folder name)*
+   Alternatively, you can drag and drop your vaults folder after typing cd
 
 3. **Start Claude Code:**
    ```bash
@@ -148,14 +148,18 @@ claude --version
    Extract .claude/commands/ and training/ from this ZIP into my vault.
    ```
 
-5. Claude will extract the course files into your vault
+5. **Restart Claude** (required for new commands to load):
+   - Type `/exit` to quit Claude
+   - Start Claude again: `claude`
+
+   > **Why restart?** Claude only loads commands from `.claude/commands/` when it starts. Anytime you add new commands, you'll need to restart Claude and `cd` back into your vault (if you're not already in your vault). It's a bit annoying, but that's just how it works for now.
 
 6. **Start the course:**
    ```
    /lesson0
    ```
 
-You're ready to begin!
+That's it! Your vault is now set up. Your CLAUDE.md, work folders, and everything else will be created as you go through the lessons.
 
 ---
 
@@ -276,14 +280,14 @@ claude --version
    - Click **Code** → **Download ZIP**
    - Save it somewhere easy to find (like Downloads)
 
-2. **Open PowerShell and navigate to your vault:**
-   ```powershell
-   cd C:\Users\[YourName]\Documents\your-vault-name
+2. **Open terminal and navigate to your Obsidian vault:**
+   ```bash
+   cd path/to/your-vault
    ```
-   *(Replace `[YourName]` and `your-vault-name` with your actual paths)*
+   Alternatively, you can drag and drop your vaults folder after typing cd
 
 3. **Start Claude Code:**
-   ```powershell
+   ```bash
    claude
    ```
 
@@ -292,14 +296,18 @@ claude --version
    Extract .claude/commands/ and training/ from this ZIP into my vault.
    ```
 
-5. Claude will extract the course files into your vault
+5. **Restart Claude** (required for new commands to load):
+   - Type `/exit` to quit Claude
+   - Start Claude again: `claude`
+
+   > **Why restart?** Claude only loads commands from `.claude/commands/` when it starts. Anytime you add new commands, you'll need to restart Claude and `cd` back into your vault (if you're not already in your vault). It's a bit annoying, but that's just how it works for now.
 
 6. **Start the course:**
    ```
    /lesson0
    ```
 
-You're ready to begin!
+That's it! Your vault is now set up. Your CLAUDE.md, work folders, and everything else will be created as you go through the lessons.
 
 ---
 
