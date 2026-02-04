@@ -1,10 +1,14 @@
-# accesso AI Training - Project Guide
+# PROJECT-GUIDE.md - FOR CLAUDE ONLY
+
+> **👋 Hey! You can ignore this file.** This is instructions for Claude on how to run the course. Nothing here is for you - go run `/lesson0` to start learning!
+
+---
 
 This is the Claude Code training course for accesso Product Managers. This file documents how the course works so we can maintain consistency when building new lessons.
 
 ## Project Structure
 
-**This training folder lives INSIDE the user's vault.** The user runs Claude from inside this folder, but their work files are created in the parent (vault root).
+**This training folder lives INSIDE the user's vault.** The user runs Claude from inside this folder, but their work files are created in the parent (vault root)
 
 ```
 user-vault/                          ← VAULT ROOT (parent directory)

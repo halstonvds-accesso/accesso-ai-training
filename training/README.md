@@ -4,8 +4,8 @@ Claude Code training course for accesso Product Managers.
 
 ## Prerequisites
 
-1. **Obsidian installed** - See `training/reference/Getting Started - Install Claude Code & Obisidian.md`
-2. **Claude Code installed** - See `training/reference/Getting Started - Install Claude Code & Obisidian.md`
+1. **Obsidian installed** - See `reference/Getting Started - Install Claude Code & Obisidian.md`
+2. **Claude Code installed** - See `reference/Getting Started - Install Claude Code & Obisidian.md`
 3. **Terminal access** - You'll run Claude Code from your terminal
 
 ## Getting Started
@@ -25,7 +25,7 @@ Claude Code training course for accesso Product Managers.
    claude
    ```
 
-4. **Drag the ZIP file into the terminal**, then type:
+4. **Drag the ZIP file into the terminal**, then copy and paste this:
    ```
    Extract .claude/commands/ and training/ from this ZIP into my vault.
    ```
@@ -67,7 +67,7 @@ my-pm-vault/                   ← You run Claude here
 ├── passport/                  ← Your work folders (created in Lesson 2)
 ├── interviews/
 ├── research/
-└── training/                  ← Training materials & progress
+└── training/                  ← Training materials & progress (you are here)
     ├── lessons/progress.md
     ├── reference/
     └── PROJECT-GUIDE.md       ← For Claude only, you can ignore

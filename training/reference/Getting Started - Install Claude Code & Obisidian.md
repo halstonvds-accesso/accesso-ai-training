@@ -125,37 +125,37 @@ claude --version
 
 ---
 
-## Step 5: Download the Course Files
+## Step 5: Install the Course
 
-1. Reference the instr
----
+1. **Download the course ZIP:**
+   - Go to https://github.com/halstonvds-accesso/accesso-ai-training
+   - Click **Code** → **Download ZIP**
+   - Save it somewhere easy to find (like Downloads)
 
-## Step 6: Install the Course with Claude
-
-1. Open **Terminal**
-2. Navigate to your vault folder:
+2. **Open Terminal and navigate to your vault:**
    ```bash
-   cd path/to/vault
+   cd ~/Documents/your-vault-name
    ```
-   *(Replace `path to vault` with your vault name)*
-3. Start Claude Code:
+   *(Replace `your-vault-name` with your actual vault folder name)*
+
+3. **Start Claude Code:**
    ```bash
    claude
    ```
-4. **Copy and paste this prompt to install the course:**
 
-```
-I just downloaded the accesso AI training course ZIP file to my Downloads folder.
-Please unzip it and set up my vault with all the course materials including:
-- The lesson commands in .claude/commands/
-- The reference documents
-- Any other course files
+4. **Drag the ZIP file into the terminal**, then type:
+   ```
+   Extract .claude/commands/ and training/ from this ZIP into my vault.
+   ```
 
-The ZIP file should be at ~/Downloads/accesso-ai-training.zip (or similar name).
-```
+5. Claude will extract the course files into your vault
 
-5. Claude will unzip the files and set up your vault
-6. Once complete, type `/lesson0` to begin the course!
+6. **Start the course:**
+   ```
+   /lesson0
+   ```
+
+You're ready to begin!
 
 ---
 
@@ -269,41 +269,37 @@ claude --version
 
 ---
 
-## Step 5: Download the Course Files
+## Step 5: Install the Course
 
-1. Download the course ZIP file from: **[COURSE DOWNLOAD LINK]**
-   *(Ask Halston or check #ai-enablement-product if you don't have the link)*
-2. Save it to your **Downloads** folder
-3. Don't unzip it - Claude will do that for you!
+1. **Download the course ZIP:**
+   - Go to https://github.com/halstonvds-accesso/accesso-ai-training
+   - Click **Code** → **Download ZIP**
+   - Save it somewhere easy to find (like Downloads)
 
----
-
-## Step 6: Install the Course with Claude
-
-1. Open **PowerShell** or **Command Prompt**
-2. Navigate to your vault folder:
+2. **Open PowerShell and navigate to your vault:**
    ```powershell
-   cd C:\Users\[YourName]\Documents\accesso-handheld
+   cd C:\Users\[YourName]\Documents\your-vault-name
    ```
-   *(Replace `[YourName]` with your username and `accesso-handheld` with your vault name)*
-3. Start Claude Code:
+   *(Replace `[YourName]` and `your-vault-name` with your actual paths)*
+
+3. **Start Claude Code:**
    ```powershell
    claude
    ```
-4. **Copy and paste this prompt to install the course:**
 
-```
-I just downloaded the accesso AI training course ZIP file to my Downloads folder.
-Please unzip it and set up my vault with all the course materials including:
-- The lesson commands in .claude/commands/
-- The reference documents
-- Any other course files
+4. **Drag the ZIP file into the terminal**, then type:
+   ```
+   Extract .claude/commands/ and training/ from this ZIP into my vault.
+   ```
 
-The ZIP file should be at C:\Users\[YourName]\Downloads\accesso-ai-training.zip (or similar name).
-```
+5. Claude will extract the course files into your vault
 
-5. Claude will unzip the files and set up your vault
-6. Once complete, type `/lesson0` to begin the course!
+6. **Start the course:**
+   ```
+   /lesson0
+   ```
+
+You're ready to begin!
 
 ---
 
@@ -346,8 +342,7 @@ Here's what you've done:
 2. ✅ (Optional) Set up transcription tools
 3. ✅ Installed Node.js
 4. ✅ Installed Claude Code
-5. ✅ Downloaded the course files
-6. ✅ Had Claude install the course in your vault
+5. ✅ Installed the course with Claude's help
 
 **You're ready!** Type `/lesson0` in Claude to begin the course.
 
