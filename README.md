@@ -36,7 +36,7 @@ Claude Code training course for accesso Product Managers.
    /lesson0
    ```
 
-That's it! Your vault is now set up. Your CLAUDE.md, work folders, and everything else will be created as you go through the lessons.
+That's it! Your vault is now set up. Your CLAUDE.md, work folders, and everything else will be created as you go through the lessons. + You just interacted with claude code for the first time while having it unzip this course and install the claude commands (don't worry, that term will make sense to you later).
 
 ---
 
