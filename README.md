@@ -19,6 +19,7 @@ Claude Code training course for accesso Product Managers.
    ```bash
    cd path/to/your-vault
    ```
+   Alternatively, you can drag and drop your vaults folder after typing cd
 
 3. **Start Claude Code:**
    ```bash
@@ -30,7 +31,14 @@ Claude Code training course for accesso Product Managers.
    Extract .claude/commands/ and training/ from this ZIP into my vault.
    ```
 
-5. **Start the course:**
+5. **Restart Claude** (required for new commands to load):
+   - Type `/exit` to quit Claude
+   - Navigate back to your vault: `cd path/to/your-vault`
+   - Start Claude again: `claude`
+
+   > **Why restart?** Claude only loads commands from `.claude/commands/` when it starts. Anytime you add new commands, you'll need to restart Claude and `cd` back into your vault. It's a bit annoying, but that's just how it works for now.
+
+6. **Start the course:**
    ```
    /lesson0
    ```
