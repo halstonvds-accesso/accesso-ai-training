@@ -4,8 +4,8 @@ Claude Code training course for accesso Product Managers.
 
 ## Prerequisites
 
-1. **Obsidian installed** - See `reference/Getting Started - Install Claude Code & Obisidian.md`
-2. **Claude Code installed** - See `reference/Getting Started - Install Claude Code & Obisidian.md`
+1. **Obsidian installed** - See `training/reference/Getting Started - Install Claude Code & Obisidian.md`
+2. **Claude Code installed** - See `training/reference/Getting Started - Install Claude Code & Obisidian.md`
 3. **Terminal access** - You'll run Claude Code from your terminal
 
 ## Getting Started
@@ -19,18 +19,25 @@ Claude Code training course for accesso Product Managers.
    ```bash
    cd path/to/your-vault
    ```
+   Alternatively, you can drag and drop your vaults folder after typing cd
 
 3. **Start Claude Code:**
    ```bash
    claude
    ```
 
-4. **Drag the ZIP file into the terminal**, then copy and paste this:
+4. **Drag the ZIP file into the terminal**, then type:
    ```
    Extract .claude/commands/ and training/ from this ZIP into my vault.
    ```
 
-5. **Start the course:**
+5. **Restart Claude** (required for new commands to load):
+   - Type `/exit` to quit Claude
+   - Start Claude again: `claude`
+
+   > **Why restart?** Claude only loads commands from `.claude/commands/` when it starts. Anytime you add new commands, you'll need to restart Claude and `cd` back into your vault (if you're not already in your vault). It's a bit annoying, but that's just how it works for now.
+
+6. **Start the course:**
    ```
    /lesson0
    ```
@@ -67,7 +74,7 @@ my-pm-vault/                   ← You run Claude here
 ├── passport/                  ← Your work folders (created in Lesson 2)
 ├── interviews/
 ├── research/
-└── training/                  ← Training materials & progress (you are here)
+└── training/                  ← Training materials & progress
     ├── lessons/progress.md
     ├── reference/
     └── PROJECT-GUIDE.md       ← For Claude only, you can ignore
