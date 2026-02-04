@@ -19,6 +19,7 @@ Claude Code training course for accesso Product Managers.
    ```bash
    cd path/to/your-vault
    ```
+   Alternatively, you can drag and drop your vaults folder after typing cd
 
 3. **Start Claude Code:**
    ```bash
