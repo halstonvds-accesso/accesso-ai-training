@@ -1,6 +1,6 @@
 # PROJECT-GUIDE.md - FOR CLAUDE ONLY
 
-> **👋 Hey! You can ignore this file.** This is instructions for Claude on how to run the course. Nothing here is for you - go run `/lesson0` to start learning!
+> **👋 Hey humans! You can ignore this file.** This is instructions for Claude on how to run the course. Nothing here is for you - go run `/lesson0` to start learning!
 
 ---
 
