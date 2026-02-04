@@ -31,12 +31,18 @@ Claude Code training course for accesso Product Managers.
    Extract .claude/commands/ and training/ from this ZIP into my vault.
    ```
 
-5. **Start the course:**
+5. **Restart Claude** (required for new commands to load):
+   - Type `/exit` to quit Claude
+   - Start Claude again: `claude`
+
+   > **Why restart?** Claude only loads commands from `.claude/commands/` when it starts. Anytime you add new commands, you'll need to restart Claude and `cd` back into your vault (if you're not already in your vault). It's a bit annoying, but that's just how it works for now.
+
+6. **Start the course:**
    ```
    /lesson0
    ```
 
-That's it! Your vault is now set up. Your CLAUDE.md, work folders, and everything else will be created as you go through the lessons. + You just interacted with claude code for the first time while having it unzip this course and install the claude commands (don't worry, that term will make sense to you later).
+That's it! Your vault is now set up. Your CLAUDE.md, work folders, and everything else will be created as you go through the lessons.
 
 ---
 
