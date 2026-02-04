@@ -18,16 +18,16 @@ Claude Code training course for accesso Product Managers.
 
 ### Option A: Using Claude Desktop (Code tab)
 
-2. **Open Claude Desktop** and click the **Code** tab in the top-left corner.
+2. **Open Claude Desktop** and click the **Code** tab in the top-center of the app.
 
-3. **Open your Obsidian vault folder** by clicking the folder icon or dragging your vault folder into the window.
+	1. **Open your Obsidian vault folder** by clicking the folder icon and selecting your vault.
 
-4. **Drag the ZIP file into the chat**, then type:
+3. **Drag the ZIP file into the chat**, then type:
    ```
    Extract .claude/commands/ and training/ from this ZIP into my vault.
    ```
 
-5. **Start a new session** (required for new commands to load):
+4. **Start a new session** (required for new commands to load):
    - Click **+** to start a new Code session (commands only load at session start)
 
 6. **Start the course:**
