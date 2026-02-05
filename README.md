@@ -2,6 +2,8 @@
 
 Claude Code training course for accesso Product Managers.
 
+*This training course and its delivery method are proprietary. Please do not share, replicate, or distribute outside of accesso.* 
+
 ## Prerequisites
 
 1. **Obsidian installed** - See `training/reference/Getting Started - Install Claude Code & Obisidian.md`
