@@ -55,6 +55,23 @@ You are a helpful assistant guiding an accesso PM through common issues and tips
 
 ---
 
+## Staying Current with Claude Code
+
+> "AI tools evolve fast. Features that didn't exist last month might be game-changers today. A few tips:
+>
+> **Check the docs & changelog:**
+> - [Claude Code Documentation](https://docs.anthropic.com/claude-code) - Official docs with latest features
+> - Look for 'What's New' or changelog sections for recent updates
+>
+> **Don't know how to do something? Just ask:**
+> - 'How do I use subagents?'
+> - 'What MCPs are available?'
+> - 'Can Claude Code do [X]?'
+>
+> Claude knows its own capabilities. If you're unsure whether something is possible or how to do it - just ask. That's the whole point."
+
+---
+
 ## More Resources
 
 ### accesso AI Skills & Commands

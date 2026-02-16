@@ -68,6 +68,8 @@ Then share these helpful references:
 >
 > **Important:** Claude Code is powerful, but it's not the only tool. If you ever feel boxed in - large files, images, or just want to think through something conversationally - **Claude Desktop (claude.ai) works great too.** Use whatever gets the job done.
 >
+> **AI changes fast:** New features drop regularly. If you want to stay current, check the [Claude Code docs](https://docs.anthropic.com/claude-code) for what's new. And if you're ever unsure how to do something - just ask! Claude knows its own capabilities.
+>
 > Also, you don't need to transfer every document you have into this workspace. Start fresh and bring in **only what you need** as you go. Less clutter, more focus."
 
 Then ask them a quick question to proceed:
